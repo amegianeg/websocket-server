@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  websocket-server:
+    build:
+      context: .
+    image: amegianeg/websocket-server
+    ports:
+      - 8888:8888
+    environment:
+      BACKEND_API: http://host.docker.internal:8000
